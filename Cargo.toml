@@ -1,0 +1,19 @@
+[package]
+name = "mini-api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = { version = "0.6", features = ["tracing"] }
+tokio = { version = "1.0", features = ["full"]}
+tower-http = { version = "0.4", features = ["trace"] }
+serde = { version = "1.0", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+async-trait = "0.1"
+diesel = { version = "2", features = ["postgres", "uuid"] }
+diesel-async = { version = "0.3.1", features = ["postgres", "deadpool"] }
+
